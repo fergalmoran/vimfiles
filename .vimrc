@@ -41,6 +41,6 @@ filetype plugin indent on     " required!
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
 " *** End Vundle ***
-
+set t_Co=256
 colorscheme badwolf
 filetype on
