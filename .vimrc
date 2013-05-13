@@ -59,5 +59,6 @@ if &term =~ "xterm"
 endif
 
 
+set t_Co=256
 colorscheme badwolf
 filetype on
