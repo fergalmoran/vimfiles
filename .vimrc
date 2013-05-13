@@ -65,7 +65,8 @@ filetype on
 
 set expandtab
 set smarttab
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
 
 
 set foldcolumn=4
