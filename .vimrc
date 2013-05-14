@@ -61,5 +61,28 @@ endif
 
 
 set t_Co=256
-colorscheme badwolf
+
 filetype on
+
+set expandtab
+set smarttab
+set tabstop=4
+set shiftwidth=4
+
+
+set foldcolumn=4
+set foldenable
+set foldlevel=2
+set foldmethod=syntax " Markers are used to specify folds.
+set foldminlines=0 " Allow folding single lines
+set foldnestmax=3 " Set max fold nesting level
+set formatoptions=
+set formatoptions+=c " Format comments
+set formatoptions+=r " Continue comments by default
+set formatoptions+=o " Make comment when using o or O from comment line
+set formatoptions+=q " Format comments with gq
+set formatoptions+=n " Recognize numbered lists
+set formatoptions+=2 " Use indent from 2nd line of a paragraph
+set formatoptions+=l " Don't break lines that are already long
+set formatoptions+=1 " Break before 1-letter words
+
