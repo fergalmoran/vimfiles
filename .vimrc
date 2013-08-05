@@ -25,6 +25,7 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'https://github.com/fholgado/minibufexpl.vim'
 Bundle 'https://github.com/juvenn/mustache.vim'
 Bundle 'https://github.com/godlygeek/tabular.git'
+Bundle 'taglist.vim'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
