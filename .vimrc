@@ -25,6 +25,9 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'https://github.com/fholgado/minibufexpl.vim'
 Bundle 'https://github.com/juvenn/mustache.vim'
 Bundle 'https://github.com/wincent/Command-T.git'
+Bundle 'https://github.com/godlygeek/tabular.git'
+Bundle 'taglist.vim'
+
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -89,3 +92,4 @@ set formatoptions+=2 " Use indent from 2nd line of a paragraph
 set formatoptions+=l " Don't break lines that are already long
 set formatoptions+=1 " Break before 1-letter words
 
+colorscheme badwolf
