@@ -26,6 +26,7 @@ Bundle 'https://github.com/fholgado/minibufexpl.vim'
 Bundle 'https://github.com/juvenn/mustache.vim'
 Bundle 'https://github.com/wincent/Command-T.git'
 Bundle 'https://github.com/godlygeek/tabular.git'
+Bundle 'https://github.com/klen/python-mode.git'
 Bundle 'taglist.vim'
 
 " vim-scripts repos
