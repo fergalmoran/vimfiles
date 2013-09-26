@@ -24,6 +24,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'https://github.com/fholgado/minibufexpl.vim'
 Bundle 'https://github.com/juvenn/mustache.vim'
+Bundle 'https://github.com/wincent/Command-T.git'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -68,6 +69,9 @@ set smarttab
 set tabstop=4
 set shiftwidth=4
 
+" easier indentation, retains selection
+vnoremap < <gv 
+vnoremap > >gv
 
 set foldcolumn=4
 set foldenable
