@@ -1,14 +1,40 @@
-set nocompatible               " be iMproved
-
-
-" *** End Vundle ***
-filetype off                   " required!
+set nocompatible 
+filetype off   
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+"Auto reload .vimrc
+autocmd! bufwritepost .vimrc source %
 
-syntax on
+"De-insaneify copy & paste
+set pastetoggle=<F2>
+set clipboard=unnamed
+
+set nobackup
+set nowritebackup
+set noswapfile
+
+let mapleader=","
+
+" easier indentation, retains selection
+vnoremap < <gv 
+vnoremap > >gv
+
+"Sane window management
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+
+map <Leader>n <esc>:tabprevious<CR>
+map <Leader>m <esc>:tabnext<CR>
+
+vnoremap <Leader>s :sort<CR>
+
+set incsearch
+set ignorecase
+set smartcase
 
 " let Vundle manage Vundle
 " required! 
@@ -23,10 +49,46 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'https://github.com/fholgado/minibufexpl.vim'
+
+Bundle 'https://github.com/Lokaltog/vim-powerline'
+set laststatus=2
+
+Bundle 'https://github.com/kien/ctrlp.vim'
+let g:ctrlp_max_height = 30
+set wildignore+=*.pyc
+set wildignore+=*_build/*
+
+Bundle 'https://github.com/klen/python-mode.git'
+map <Leader>g :call RopeGotoDefinition()<CR>
+let ropevim_enable_shortcuts = 1
+let g:pymode_rope_goto_def_newwin = "vnew"
+let g:pymode_rope_extended_complete = 1
+let g:pymode_breakout = 0
+let g:pymode_syntax = 1
+let g:pymode_syntax_builtin_objs = 0
+let g:pymode_syntax_builtin_funcs = 0
+map <Leader>b 0import ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+
+set completeopt=longest,menuone
+function! OmniPopup(action)
+    if pumvisible()
+        if a:action == 'j'
+            return "\<C-N>"
+        elseif a:action == 'k'
+            return "\<C-P>"
+        endif
+    endif
+    return a:action
+endfunction
+inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
+inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
+
+Bundle 'kchmck/vim-coffee-script'
+au BufWritePost *.coffee silent make!
+
 Bundle 'https://github.com/juvenn/mustache.vim'
 Bundle 'https://github.com/wincent/Command-T.git'
 Bundle 'https://github.com/godlygeek/tabular.git'
-Bundle 'https://github.com/klen/python-mode.git'
 Bundle 'taglist.vim'
 
 " vim-scripts repos
@@ -34,19 +96,6 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
-" ...
-
-filetype plugin indent on     " required!
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
-" *** End Vundle ***
 
 " Setup 256 colors
 if &term =~ "xterm"
@@ -71,11 +120,8 @@ filetype on
 set expandtab
 set smarttab
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
-
-" easier indentation, retains selection
-vnoremap < <gv 
-vnoremap > >gv
 
 set foldcolumn=4
 set foldenable
@@ -94,3 +140,7 @@ set formatoptions+=l " Don't break lines that are already long
 set formatoptions+=1 " Break before 1-letter words
 
 colorscheme badwolf
+
+syntax enable
+filetype plugin indent on   
+
