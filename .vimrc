@@ -33,7 +33,6 @@ map <Leader>m <esc>:tabnext<CR>
 vnoremap <Leader>s :sort<CR>
 
 set incsearch
-set ignorecase
 set smartcase
 
 " let Vundle manage Vundle
@@ -57,7 +56,11 @@ Bundle 'https://github.com/kien/ctrlp.vim'
 let g:ctrlp_max_height = 30
 set wildignore+=*.pyc
 set wildignore+=*_build/*
-
+" Sane Ignore For ctrlp
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|node_modules|public\/images\|public\/system\|data\|log\|tmp$',
+  \ 'file': '\.exe$\|\.so$\|\.dat$'
+  \ }
 Bundle 'https://github.com/klen/python-mode.git'
 map <Leader>g :call RopeGotoDefinition()<CR>
 let ropevim_enable_shortcuts = 1
@@ -139,7 +142,7 @@ set formatoptions+=2 " Use indent from 2nd line of a paragraph
 set formatoptions+=l " Don't break lines that are already long
 set formatoptions+=1 " Break before 1-letter words
 
-colorscheme badwolf
+colorscheme elflord
 
 syntax enable
 filetype plugin indent on   
