@@ -21,6 +21,13 @@ let mapleader=","
 vnoremap < <gv 
 vnoremap > >gv
 
+"brace autocompletion
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
+
+
 "Sane window management
 map <c-h> <c-w>h
 map <c-j> <c-w>j
@@ -29,6 +36,11 @@ map <c-l> <c-w>l
 
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
+
+"CTRL-N to open Nerd Tree
+map <C-n> :NERDTreeToggle<CR>
+"Close vim when NERDTree is the only window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 vnoremap <Leader>s :sort<CR>
 
@@ -43,17 +55,29 @@ Bundle 'scrooloose/nerdtree'
 " My Bundles here:
 "
 " original repos on github
+Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'https://github.com/fholgado/minibufexpl.vim'
+Bundle 'evanmiller/nginx-vim-syntax'
 
-Bundle 'https://github.com/Lokaltog/vim-powerline'
+Bundle "pangloss/vim-javascript"
+
+Bundle 'https://github.com/Lokaltog/powerline'
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set laststatus=2
 
 Bundle 'https://github.com/kien/ctrlp.vim'
 let g:ctrlp_max_height = 30
+set wildignore+=*node_modules*
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
 set wildignore+=*.pyc
 set wildignore+=*_build/*
 " Sane Ignore For ctrlp
