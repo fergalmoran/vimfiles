@@ -45,7 +45,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 vnoremap <Leader>s :sort<CR>
 
 set incsearch
-set ignorecase
 set smartcase
 
 " let Vundle manage Vundle
