@@ -39,6 +39,8 @@ map <Leader>m <esc>:tabnext<CR>
 
 "CTRL-N to open Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
+
 "Close vim when NERDTree is the only window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
@@ -62,6 +64,10 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'https://github.com/fholgado/minibufexpl.vim'
 Bundle 'evanmiller/nginx-vim-syntax'
+Bundle "wookiehangover/jshint.vim"
+Bundle "bpowell/vim-android.git"
+
+let g:JSHintHighlightErrorLine = 0
 
 Bundle "pangloss/vim-javascript"
 
@@ -80,6 +86,9 @@ let g:ctrlp_custom_ignore = {
 
 set wildignore+=*.pyc
 set wildignore+=*_build/*
+
+let g:syntastic_always_populate_loc_list = 0                                    
+let g:syntastic_auto_loc_list = 0 
 
 Bundle 'https://github.com/klen/python-mode.git'
 map <Leader>g :call RopeGotoDefinition()<CR>
