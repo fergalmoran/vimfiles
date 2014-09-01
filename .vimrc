@@ -34,8 +34,8 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
 
 "CTRL-N to open Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
@@ -181,3 +181,7 @@ colorscheme elflord
 syntax enable
 filetype plugin indent on   
 
+"Added by android-vim:
+set tags+=/home/fergalm/.vim/tags
+autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+let g:SuperTabDefaultCompletionType = 'context'
