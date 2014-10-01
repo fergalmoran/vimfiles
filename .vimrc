@@ -69,7 +69,22 @@ Bundle "bpowell/vim-android.git"
 
 let g:JSHintHighlightErrorLine = 0
 
-Bundle "pangloss/vim-javascript"
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'marijnh/tern_for_vim' 
+" These are the tweaks I apply to YCM's config, you don't need them but they
+" might help.
+" " YCM gives you popups and splits by default that some people might not
+" like, so these should tidy it up a bit for you.
+" let g:ycm_add_preview_to_completeopt=0
+" let g:ycm_confirm_extra_conf=0
+" set completeopt-=preview
+Bundle "jelera/vim-javascript-syntax"
+Bundle 'pangloss/vim-javascript'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'Raimondi/delimitMate'
+
+" Map CTRL-C to split line
+imap <C-c> <CR><Esc>O
 
 Bundle 'https://github.com/Lokaltog/powerline'
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
@@ -176,7 +191,11 @@ set formatoptions+=2 " Use indent from 2nd line of a paragraph
 set formatoptions+=l " Don't break lines that are already long
 set formatoptions+=1 " Break before 1-letter words
 
-colorscheme elflord
+
+set t_Co=256
+syntax on
+set background=dark
+colorscheme distinguished
 
 syntax enable
 filetype plugin indent on   
