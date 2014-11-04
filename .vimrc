@@ -36,6 +36,7 @@ map <c-l> <c-w>l
 
 :nnoremap <Tab> :bnext<CR>
 :nnoremap <S-Tab> :bprevious<CR>
+:noremap <F3> :Autoformat<CR><CR>
 
 "CTRL-N to open Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
@@ -51,9 +52,12 @@ set smartcase
 
 " let Vundle manage Vundle
 " required! 
+Bundle 'Chiel92/vim-autoformat'
+Bundle 'mattn/emmet-vim'
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 
+Bundle 'Lokaltog/vim-distinguished'
 " My Bundles here:
 "
 " original repos on github
@@ -68,6 +72,7 @@ Bundle "wookiehangover/jshint.vim"
 Bundle "bpowell/vim-android.git"
 
 let g:JSHintHighlightErrorLine = 0
+let g:miniBufExplForceSyntaxEnable = 1
 
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim' 
