@@ -14,5 +14,8 @@ cd ~/.vim/bundle/YouCompleteMe
 vim
 :BundleInstall
 
+cd ~./bundle/tern_for_vim
+npm install
+
 Huzzah!
 
