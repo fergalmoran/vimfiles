@@ -70,6 +70,7 @@ Bundle 'https://github.com/fholgado/minibufexpl.vim'
 Bundle 'evanmiller/nginx-vim-syntax'
 Bundle "wookiehangover/jshint.vim"
 Bundle "bpowell/vim-android.git"
+Bundle "digitaltoad/vim-jade.git"
 
 let g:JSHintHighlightErrorLine = 0
 let g:miniBufExplForceSyntaxEnable = 1
