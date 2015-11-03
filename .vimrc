@@ -1,6 +1,9 @@
 set nocompatible 
 filetype off   
 
+" using Source Code Pro
+set anti enc=utf-8
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -53,50 +56,35 @@ set smartcase
 " let Vundle manage Vundle
 " required! 
 Bundle 'Chiel92/vim-autoformat'
-Bundle 'mattn/emmet-vim'
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 
-Bundle 'Lokaltog/vim-distinguished'
 " My Bundles here:
 "
 " original repos on github
-Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-Bundle 'https://github.com/fholgado/minibufexpl.vim'
-Bundle 'evanmiller/nginx-vim-syntax'
-Bundle "wookiehangover/jshint.vim"
-Bundle "bpowell/vim-android.git"
-Bundle "digitaltoad/vim-jade.git"
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'marijnh/tern_for_vim' 
+Bundle 'https://github.com/kien/ctrlp.vim'
+Bundle 'https://github.com/klen/python-mode.git'
+Bundle 'https://github.com/godlygeek/tabular.git'
+Bundle 'taglist.vim'
 
 let g:JSHintHighlightErrorLine = 0
 let g:miniBufExplForceSyntaxEnable = 1
 
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'marijnh/tern_for_vim' 
 " These are the tweaks I apply to YCM's config, you don't need them but they
 " might help.
 " " YCM gives you popups and splits by default that some people might not
 " like, so these should tidy it up a bit for you.
-" let g:ycm_add_preview_to_completeopt=0
-" let g:ycm_confirm_extra_conf=0
-" set completeopt-=preview
-Bundle "jelera/vim-javascript-syntax"
-Bundle 'pangloss/vim-javascript'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'Raimondi/delimitMate'
-
+let g:ycm_add_preview_to_completeopt=0
+let g:ycm_confirm_extra_conf=0
 " Map CTRL-C to split line
 imap <C-c> <CR><Esc>O
 
-Bundle 'https://github.com/Lokaltog/powerline'
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set laststatus=2
 
-Bundle 'https://github.com/kien/ctrlp.vim'
 let g:ctrlp_max_height = 30
 set wildignore+=*node_modules*
 let g:ctrlp_custom_ignore = {
@@ -108,24 +96,12 @@ let g:ctrlp_custom_ignore = {
 set wildignore+=*.pyc
 set wildignore+=*_build/*
 
-let g:syntastic_always_populate_loc_list = 0                                    
-let g:syntastic_auto_loc_list = 0 
-
 " Sane Ignore For ctrlp
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|node_modules|public\/images\|public\/system\|data\|log\|tmp$',
   \ 'file': '\.exe$\|\.so$\|\.dat$'
   \ }
-Bundle 'https://github.com/klen/python-mode.git'
 map <Leader>g :call RopeGotoDefinition()<CR>
-let ropevim_enable_shortcuts = 1
-let g:pymode_rope_goto_def_newwin = "vnew"
-let g:pymode_rope_extended_complete = 1
-let g:pymode_breakout = 0
-let g:pymode_syntax = 1
-let g:pymode_syntax_builtin_objs = 0
-let g:pymode_syntax_builtin_funcs = 0
-map <Leader>b 0import ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
 set completeopt=longest,menuone
 function! OmniPopup(action)
@@ -141,19 +117,7 @@ endfunction
 inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
 inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 
-Bundle 'kchmck/vim-coffee-script'
-au BufWritePost *.coffee silent make!
 
-Bundle 'https://github.com/juvenn/mustache.vim'
-Bundle 'https://github.com/wincent/Command-T.git'
-Bundle 'https://github.com/godlygeek/tabular.git'
-Bundle 'taglist.vim'
-
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-" non github repos
-Bundle 'git://git.wincent.com/command-t.git'
 
 " Setup 256 colors
 if &term =~ "xterm"
@@ -201,7 +165,6 @@ set formatoptions+=1 " Break before 1-letter words
 set t_Co=256
 syntax on
 set background=dark
-colorscheme distinguished
 
 syntax enable
 filetype plugin indent on   
