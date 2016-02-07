@@ -11,9 +11,7 @@ git submodule update
 vim
 :BundleInstall
 
-apt-get install exuberant-ctags build-essential cmake python-dev
-cd ~/.vim/bundle/YouCompleteMe
-./install.sh --clang-completer
+apt-get install exuberant-ctags build-essential cmake python-dev vim-youcompleteme
 
 cd ~./bundle/tern_for_vim
 npm install
