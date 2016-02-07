@@ -1,7 +1,7 @@
 My vim configuration
 
 cd ~
-git clone <repo> .vim
+git clone git@github.com:fergalmoran/vimfiles.git .vim
 ln -s ~/.vim/.vimrc .vimrc
 
 cd .vim
