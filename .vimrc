@@ -58,13 +58,14 @@ set smartcase
 Bundle 'Chiel92/vim-autoformat'
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
+Bundle 'leafgarland/typescript-vim'
 
 " My Bundles here:
 "
 " original repos on github
 Bundle 'tpope/vim-fugitive'
 Bundle 'fholgado/minibufexpl.vim'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim' 
 Bundle 'https://github.com/kien/ctrlp.vim'
 Bundle 'https://github.com/klen/python-mode.git'
