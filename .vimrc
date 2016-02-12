@@ -1,6 +1,7 @@
 set nocompatible 
 filetype off   
 
+colorscheme badwolf
 " using Source Code Pro
 set anti enc=utf-8
 
@@ -64,12 +65,11 @@ Bundle 'scrooloose/nerdtree'
 " original repos on github
 Bundle 'tpope/vim-fugitive'
 Bundle 'fholgado/minibufexpl.vim'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'https://github.com/kien/ctrlp.vim'
 Bundle 'https://github.com/klen/python-mode.git'
 Bundle 'https://github.com/godlygeek/tabular.git'
 Bundle 'taglist.vim'
-
+Bundle 'mattn/emmet-vim'
 let g:JSHintHighlightErrorLine = 0
 let g:miniBufExplForceSyntaxEnable = 1
 
@@ -116,6 +116,7 @@ endfunction
 inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
 inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 
+colorscheme elflord
 
 
 " Setup 256 colors
