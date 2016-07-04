@@ -1,7 +1,7 @@
 My vim configuration
 
 cd ~
-git clone <repo> .vim
+git clone git@github.com:fergalmoran/vimfiles.git .vim
 ln -s ~/.vim/.vimrc .vimrc
 
 cd .vim
@@ -11,9 +11,7 @@ git submodule update
 vim
 :BundleInstall
 
-apt-get install exuberant-ctags build-essential cmake python-dev
-cd ~/.vim/bundle/YouCompleteMe
-./install.sh --clang-completer
+apt-get install exuberant-ctags build-essential cmake python-dev vim-youcompleteme
 
 cd ~./bundle/tern_for_vim
 npm install
