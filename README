@@ -13,7 +13,7 @@ vim
 
 apt-get install exuberant-ctags build-essential cmake python-dev vim-youcompleteme
 
-cd ~./bundle/tern_for_vim
+cd ~/.vim/bundle/tern_for_vim
 npm install
 
 Huzzah!
