@@ -62,7 +62,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'SirVer/ultisnips'
-
+Bundle 'evanmiller/nginx-vim-syntax'
 " My Bundles here:
 "
 " original repos on github
