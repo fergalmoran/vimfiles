@@ -1,9 +1,8 @@
-set nocompatible 
-filetype off   
+set nocompatible
+filetype off
 
 colorscheme badwolf
 " using Source Code Pro
-set anti enc=utf-8
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -22,7 +21,7 @@ set noswapfile
 let mapleader=","
 
 " easier indentation, retains selection
-vnoremap < <gv 
+vnoremap < <gv
 vnoremap > >gv
 
 "brace autocompletion
@@ -55,7 +54,7 @@ set incsearch
 set smartcase
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'Chiel92/vim-autoformat'
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
@@ -67,17 +66,28 @@ Bundle 'evanmiller/nginx-vim-syntax'
 "
 " original repos on github
 Bundle 'tpope/vim-fugitive'
-Bundle 'fholgado/minibufexpl.vim'
+" Bundle 'fholgado/minibufexpl.vim'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'marijnh/tern_for_vim' 
+Bundle 'marijnh/tern_for_vim'
 Bundle 'https://github.com/kien/ctrlp.vim'
 Bundle 'https://github.com/klen/python-mode.git'
 Bundle 'https://github.com/godlygeek/tabular.git'
 Bundle 'taglist.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'tpope/vim-dispatch'
+
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
+Bundle 'ntpeters/vim-better-whitespace'
+Bundle 'ap/vim-buftabline'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'elzr/vim-json'
+Bundle 'OmniSharp/omnisharp-vim'
+
 let g:JSHintHighlightErrorLine = 0
 let g:miniBufExplForceSyntaxEnable = 1
+
+let g:airline#extensions#tabline#enabled = 1
 
 " These are the tweaks I apply to YCM's config, you don't need them but they
 " might help.
@@ -173,7 +183,7 @@ syntax on
 set background=dark
 
 syntax enable
-filetype plugin indent on   
+filetype plugin indent on
 
 "Added by android-vim:
 set tags+=/home/fergalm/.vim/tags
