@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-colorscheme badwolf
+colorscheme gruvbox
 " using Source Code Pro
 
 set rtp+=~/.vim/bundle/vundle/
@@ -83,6 +83,7 @@ Bundle 'ap/vim-buftabline'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'elzr/vim-json'
 Bundle 'OmniSharp/omnisharp-vim'
+Bundle 'morhetz/gruvbox'
 
 let g:JSHintHighlightErrorLine = 0
 let g:miniBufExplForceSyntaxEnable = 1
