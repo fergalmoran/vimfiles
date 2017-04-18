@@ -1,7 +1,6 @@
 set nocompatible
 filetype off
 
-colorscheme gruvbox
 " using Source Code Pro
 
 set rtp+=~/.vim/bundle/vundle/
@@ -191,3 +190,4 @@ set tags+=/home/fergalm/.vim/tags
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 let g:SuperTabDefaultCompletionType = 'context'
 
+colorscheme gruvbox
