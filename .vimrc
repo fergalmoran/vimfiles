@@ -1,7 +1,6 @@
 set nocompatible
 filetype off
 
-colorscheme badwolf
 " using Source Code Pro
 
 set rtp+=~/.vim/bundle/vundle/
@@ -84,6 +83,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'elzr/vim-json'
 Bundle 'OmniSharp/omnisharp-vim'
 Bundle 'OrangeT/vim-csharp'
+Bundle 'morhetz/gruvbox'
 
 let g:JSHintHighlightErrorLine = 0
 let g:miniBufExplForceSyntaxEnable = 1
@@ -135,28 +135,6 @@ inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 
 let g:OmniSharp_server_type = 'roslyn'
 
-colorscheme elflord
-
-
-
-" Setup 256 colors
-if &term =~ "xterm"
-  "256 color --
-  let &t_Co=256
-  " restore screen after quitting
-  set t_ti=ESC7ESC[rESC[?47h t_te=ESC[?47lESC8
-  if has("terminfo")
-    let &t_Sf="\ESC[3%p1%dm"
-    let &t_Sb="\ESC[4%p1%dm"
-  else
-    let &t_Sf="\ESC[3%dm"
-    let &t_Sb="\ESC[4%dm"
-  endif
-endif
-
-
-set t_Co=256
-
 filetype on
 
 set expandtab
@@ -181,8 +159,6 @@ set formatoptions+=2 " Use indent from 2nd line of a paragraph
 set formatoptions+=l " Don't break lines that are already long
 set formatoptions+=1 " Break before 1-letter words
 
-
-set t_Co=256
 syntax on
 set background=dark
 
@@ -194,3 +170,4 @@ set tags+=/home/fergalm/.vim/tags
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 let g:SuperTabDefaultCompletionType = 'context'
 
+colorscheme gruvbox
