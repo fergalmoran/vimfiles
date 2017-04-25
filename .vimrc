@@ -83,6 +83,7 @@ Bundle 'ap/vim-buftabline'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'elzr/vim-json'
 Bundle 'OmniSharp/omnisharp-vim'
+Bundle 'OrangeT/vim-csharp'
 
 let g:JSHintHighlightErrorLine = 0
 let g:miniBufExplForceSyntaxEnable = 1
@@ -132,7 +133,10 @@ endfunction
 inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
 inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 
+let g:OmniSharp_server_type = 'roslyn'
+
 colorscheme elflord
+
 
 
 " Setup 256 colors
