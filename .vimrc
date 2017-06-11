@@ -1,10 +1,10 @@
 set nocompatible
 filetype off
 
-" using Source Code Pro
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
 
 "Auto reload .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -54,36 +54,36 @@ set smartcase
 
 " let Vundle manage Vundle
 " required!
-Bundle 'Chiel92/vim-autoformat'
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'leafgarland/typescript-vim'
-Bundle 'SirVer/ultisnips'
-Bundle 'evanmiller/nginx-vim-syntax'
-" My Bundles here:
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'gmarik/vundle'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'evanmiller/nginx-vim-syntax'
+" My Plugins here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-" Bundle 'fholgado/minibufexpl.vim'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'marijnh/tern_for_vim'
-Bundle 'https://github.com/kien/ctrlp.vim'
-Bundle 'https://github.com/klen/python-mode.git'
-Bundle 'https://github.com/godlygeek/tabular.git'
-Bundle 'taglist.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'tpope/vim-dispatch'
+Plugin 'tpope/vim-fugitive'
+" Plugin 'fholgado/minibufexpl.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'https://github.com/kien/ctrlp.vim'
+Plugin 'https://github.com/klen/python-mode.git'
+Plugin 'https://github.com/godlygeek/tabular.git'
+Plugin 'taglist.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-dispatch'
 
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'ntpeters/vim-better-whitespace'
-Bundle 'ap/vim-buftabline'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'elzr/vim-json'
-Bundle 'OmniSharp/omnisharp-vim'
-Bundle 'OrangeT/vim-csharp'
-Bundle 'morhetz/gruvbox'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'ap/vim-buftabline'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'elzr/vim-json'
+Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'OrangeT/vim-csharp'
+Plugin 'morhetz/gruvbox'
 
 let g:JSHintHighlightErrorLine = 0
 let g:miniBufExplForceSyntaxEnable = 1
