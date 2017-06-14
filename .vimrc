@@ -67,16 +67,15 @@ Plugin 'evanmiller/nginx-vim-syntax'
 "
 " original repos on github
 Plugin 'tpope/vim-dispatch'
-Plugin 'airblade/vim-gutter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'klen/python-mode'
-Plugin 'godlygeek/tabulart'
 Plugin 'taglist.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'ryanoasis/vim-devicons'
 
 Plugin 'Yggdroot/indentline'
 Plugin 'vim-airline/vim-airline'
@@ -87,7 +86,6 @@ Plugin 'elzr/vim-json'
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'OrangeT/vim-csharp'
 Plugin 'morhetz/gruvbox'
-Plugin 'ryanoasis/vim-devicons'
 
 let g:JSHintHighlightErrorLine = 0
 let g:miniBufExplForceSyntaxEnable = 1
