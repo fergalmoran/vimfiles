@@ -29,6 +29,8 @@ inoremap {<CR>  {<CR>}<Esc>O
 inoremap {{     {
 inoremap {}     {}
 
+"remove whitespace
+nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 "Sane window management
 map <c-h> <c-w>h
@@ -36,9 +38,9 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 
-:nnoremap <Tab> :bnext<CR>
-:nnoremap <S-Tab> :bprevious<CR>
-:noremap <F3> :Autoformat<CR><CR>
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+noremap <F3> :Autoformat<CR><CR>
 
 "CTRL-N to open Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
@@ -64,26 +66,28 @@ Plugin 'evanmiller/nginx-vim-syntax'
 " My Plugins here:
 "
 " original repos on github
-Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-dispatch'
+Plugin 'airblade/vim-gutter'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
-Plugin 'https://github.com/kien/ctrlp.vim'
-Plugin 'https://github.com/klen/python-mode.git'
-Plugin 'https://github.com/godlygeek/tabular.git'
+Plugin 'kien/ctrlp.vim'
+Plugin 'klen/python-mode'
+Plugin 'godlygeek/tabulart'
 Plugin 'taglist.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-dispatch'
 
+Plugin 'Yggdroot/indentline'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'ap/vim-buftabline'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'elzr/vim-json'
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'OrangeT/vim-csharp'
 Plugin 'morhetz/gruvbox'
+Plugin 'ryanoasis/vim-devicons'
 
 let g:JSHintHighlightErrorLine = 0
 let g:miniBufExplForceSyntaxEnable = 1
