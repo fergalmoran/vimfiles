@@ -1,6 +1,6 @@
 set nocompatible
 filetype off
-
+set encoding=utf8
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -8,6 +8,8 @@ call vundle#rc()
 
 "Auto reload .vimrc
 autocmd! bufwritepost .vimrc source %
+
+autocmd FileType nerdtree setlocal nolist
 
 "De-insaneify copy & paste
 set pastetoggle=<F2>
@@ -59,10 +61,12 @@ set smartcase
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'scrooloose/syntastic'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'evanmiller/nginx-vim-syntax'
+Plugin 'chr4/nginx.vim'
 " My Plugins here:
 "
 " original repos on github
@@ -75,7 +79,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'klen/python-mode'
 Plugin 'taglist.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'ryanoasis/vim-devicons'
 
 Plugin 'Yggdroot/indentline'
 Plugin 'vim-airline/vim-airline'
@@ -87,10 +90,21 @@ Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'OrangeT/vim-csharp'
 Plugin 'morhetz/gruvbox'
 
+Plugin 'ryanoasis/vim-devicons'
+
+" step 2: font configuration
+" " These are the basic settings to get the font to work (required):
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+set encoding=utf-8
+" " required if using https://github.com/bling/vim-airline
+let g:airline_powerline_fonts=1
+
+
 let g:JSHintHighlightErrorLine = 0
 let g:miniBufExplForceSyntaxEnable = 1
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " These are the tweaks I apply to YCM's config, you don't need them but they
 " might help.
