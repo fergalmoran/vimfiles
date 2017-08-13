@@ -18,6 +18,8 @@ set nowritebackup
 set noswapfile
 
 let mapleader=","
+" unhighlight search on pressing return
+nnoremap <CR> :noh<CR><CR>
 
 " easier indentation, retains selection
 vnoremap < <gv
