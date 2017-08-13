@@ -67,14 +67,12 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'chr4/nginx.vim'
-" My Plugins here:
-"
-" original repos on github
+
 Plugin 'tpope/vim-dispatch'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-" Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
+
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'klen/python-mode'
 Plugin 'taglist.vim'
