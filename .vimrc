@@ -68,7 +68,6 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'SirVer/ultisnips'
-Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'chr4/nginx.vim'
 
 Plugin 'tpope/vim-dispatch'
