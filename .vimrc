@@ -8,6 +8,8 @@ call vundle#rc()
 "Who the fuck wants to load a tar file in vim???
 let g:loaded_tarPlugin = 1
 
+let s:uname = system("echo -n \"$(uname)\"")
+
 "Auto reload .vimrc
 autocmd! bufwritepost .vimrc source %
 
@@ -77,13 +79,10 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'SirVer/ultisnips'
-Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'chr4/nginx.vim'
 
 Plugin 'tpope/vim-dispatch'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'marijnh/tern_for_vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'klen/python-mode'
@@ -96,12 +95,15 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'ap/vim-buftabline'
 Plugin 'elzr/vim-json'
-Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'OrangeT/vim-csharp'
 Plugin 'morhetz/gruvbox'
 
 Plugin 'ryanoasis/vim-devicons'
-
+if system("uname -m") != "armv7l\n"
+    Plugin 'Valloric/YouCompleteMe'
+    Plugin 'marijnh/tern_for_vim'
+    Plugin 'OmniSharp/omnisharp-vim'
+    Plugin 'OrangeT/vim-csharp'
+endif 
 " step 2: font configuration
 " " These are the basic settings to get the font to work (required):
 " set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
