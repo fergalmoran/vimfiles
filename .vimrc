@@ -5,11 +5,16 @@ set encoding=utf8
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+"Who the fuck wants to load a tar file in vim???
+let g:loaded_tarPlugin = 1
 
 "Auto reload .vimrc
 autocmd! bufwritepost .vimrc source %
 
 autocmd FileType nerdtree setlocal nolist
+
+let g:python_host_prog = '/home/fergalm/.virtualenvs/nvim2/bin/python'
+let g:python3_host_prog = '/home/fergalm/.virtualenvs/nvim3/bin/python'
 
 "De-insaneify copy & paste
 set pastetoggle=<F2>
@@ -18,6 +23,10 @@ set clipboard=unnamed
 set nobackup
 set nowritebackup
 set noswapfile
+set mouse=a
+
+" stop hiding fucking quotes
+set conceallevel=0
 
 let mapleader=","
 " unhighlight search on pressing return
@@ -95,7 +104,8 @@ Plugin 'ryanoasis/vim-devicons'
 
 " step 2: font configuration
 " " These are the basic settings to get the font to work (required):
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+" set guifont=FuraMono-Medium\ Powerline\ 12
 set encoding=utf-8
 " " required if using https://github.com/bling/vim-airline
 let g:airline_powerline_fonts=1
@@ -116,6 +126,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" pymode config
+let g:pymode_lint_config = '$HOME/.pylint.rc'
 
 " Typescript configs (this will probably slow shit to a crawl)
 let g:typescript_compiler_binary = 'tsc'
