@@ -27,8 +27,11 @@ set nowritebackup
 set noswapfile
 set mouse=a
 
+set colorcolumn=121
+
+
 " stop hiding fucking quotes
-set conceallevel=0
+set conceallevel=3
 
 let mapleader=","
 " unhighlight search on pressing return
@@ -97,17 +100,18 @@ Plugin 'ap/vim-buftabline'
 Plugin 'elzr/vim-json'
 Plugin 'morhetz/gruvbox'
 
-Plugin 'ryanoasis/vim-devicons'
 if system("uname -m") != "armv7l\n"
     Plugin 'Valloric/YouCompleteMe'
     Plugin 'marijnh/tern_for_vim'
     Plugin 'OmniSharp/omnisharp-vim'
     Plugin 'OrangeT/vim-csharp'
 endif 
+Plugin 'ryanoasis/vim-devicons'
 " step 2: font configuration
 " " These are the basic settings to get the font to work (required):
-" set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
-" set guifont=FuraMono-Medium\ Powerline\ 12
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+set guifont=Fira\ Code\ Medium\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Medium\ 12
+
 set encoding=utf-8
 " " required if using https://github.com/bling/vim-airline
 let g:airline_powerline_fonts=1
@@ -212,6 +216,9 @@ set background=dark
 
 syntax enable
 filetype plugin indent on
+
+"pyflake settings
+let g:flake8_show_quickfix=0
 
 "Added by android-vim:
 set tags+=/home/fergalm/.vim/tags
