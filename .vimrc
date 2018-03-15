@@ -99,6 +99,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'ap/vim-buftabline'
 Plugin 'elzr/vim-json'
 Plugin 'morhetz/gruvbox'
+Plugin 'dracula/vim'
 
 if system("uname -m") != "armv7l\n"
     Plugin 'Valloric/YouCompleteMe'
@@ -225,4 +226,4 @@ set tags+=/home/fergalm/.vim/tags
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 let g:SuperTabDefaultCompletionType = 'context'
 
-colorscheme gruvbox
+colorscheme dracula
