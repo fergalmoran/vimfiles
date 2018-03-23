@@ -79,6 +79,7 @@ set smartcase
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'Shougo/vimproc.vim'
@@ -227,5 +228,8 @@ let g:flake8_show_quickfix=0
 set tags+=/home/fergalm/.vim/tags
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 let g:SuperTabDefaultCompletionType = 'context'
+
+" NerdCommenter
+let g:NERDSpaceDelims = 1
 
 colorscheme dracula
