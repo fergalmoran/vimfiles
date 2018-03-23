@@ -20,7 +20,9 @@ let g:python3_host_prog = '/home/fergalm/.virtualenvs/nvim3/bin/python'
 
 "De-insaneify copy & paste
 set pastetoggle=<F2>
-set clipboard=unnamed
+if $TMUX == ''
+    set clipboard+=unnamed
+endif
 
 set nobackup
 set nowritebackup
@@ -111,7 +113,7 @@ Plugin 'ryanoasis/vim-devicons'
 " step 2: font configuration
 " " These are the basic settings to get the font to work (required):
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
-set guifont=Fira\ Code\ Medium\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Medium\ 12
+" set guifont=Fira\ Code\ Medium\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Medium\ 12
 
 set encoding=utf-8
 " " required if using https://github.com/bling/vim-airline
