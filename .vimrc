@@ -33,7 +33,7 @@ set colorcolumn=121
 
 
 " stop hiding fucking quotes
-set conceallevel=3
+let g:vim_json_syntax_conceal = 0
 
 let mapleader=","
 " unhighlight search on pressing return
@@ -61,6 +61,7 @@ map <c-l> <c-w>l
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 noremap <F3> :Autoformat<CR><CR>
+noremap <C-w> :Bclose<CR>
 
 "CTRL-N to open Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
@@ -105,6 +106,8 @@ Plugin 'morhetz/gruvbox'
 Plugin 'dracula/vim'
 
 if system("uname -m") != "armv7l\n"
+    Plugin 'Shougo/vimproc'
+    Plugin 'Quramy/tsuquyomi'
     Plugin 'Valloric/YouCompleteMe'
     Plugin 'marijnh/tern_for_vim'
     Plugin 'OmniSharp/omnisharp-vim'
