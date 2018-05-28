@@ -61,7 +61,7 @@ map <c-l> <c-w>l
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 noremap <F3> :Autoformat<CR><CR>
-noremap <C-w> :Bclose<CR>
+noremap <C-c> :Bclose<CR>
 
 "CTRL-N to open Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
