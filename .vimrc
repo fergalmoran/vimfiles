@@ -18,6 +18,12 @@ autocmd FileType nerdtree setlocal nolist
 let g:python_host_prog = '/home/fergalm/.virtualenvs/nvim2/bin/python'
 let g:python3_host_prog = '/home/fergalm/.virtualenvs/nvim3/bin/python'
 
+"LEARN THE FUCKING VIM FERG
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
 "De-insaneify copy & paste
 set pastetoggle=<F2>
 if $TMUX == ''
@@ -88,6 +94,7 @@ Plugin 'craigemery/vim-autotag'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'chr4/nginx.vim'
+Plugin 'zxqfl/tabnine-vim'
 
 Plugin 'tpope/vim-dispatch'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -109,7 +116,7 @@ Plugin 'dracula/vim'
 if system("uname -m") != "armv7l\n"
     Plugin 'Shougo/vimproc'
     Plugin 'Quramy/tsuquyomi'
-    Plugin 'Valloric/YouCompleteMe'
+    " Plugin 'Valloric/YouCompleteMe'
     Plugin 'marijnh/tern_for_vim'
     Plugin 'OmniSharp/omnisharp-vim'
     Plugin 'OrangeT/vim-csharp'
@@ -117,7 +124,7 @@ endif
 Plugin 'ryanoasis/vim-devicons'
 " step 2: font configuration
 " " These are the basic settings to get the font to work (required):
-" set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 " set guifont=Fira\ Code\ Medium\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Medium\ 12
 
 set encoding=utf-8
@@ -217,18 +224,11 @@ filetype plugin on
 
 "omnisharp settings
 " OmniSharp won't work without this setting
-let g:OmniSharp_server_path='/home/fergalm/working/omnisharp-roslyn/omnisharp/OmniSharp.exe'
-
-
-" Set the type lookup function to use the preview window instead of echoing it
-"let g:OmniSharp_typeLookupInPreview = 1
-
-" Timeout in seconds to wait for a response from the server
-let g:OmniSharp_timeout = 5
 
 " Don't autoselect first omnicomplete option, show options even if there is only
 " one (so the preview documentation is accessible). Remove 'preview' if you
 " don't want to see any documentation whatsoever.
+let g:OmniSharp_server_path='/opt/OmniSharp/OmniSharp.exe'
 set completeopt=longest,menuone,preview
 
 " Fetch full documentation during omnicomplete requests.
