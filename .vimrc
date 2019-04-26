@@ -1,6 +1,6 @@
 set nocompatible
 filetype off
-set encoding=utf8
+set encoding=UTF8
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -124,10 +124,10 @@ endif
 Plugin 'ryanoasis/vim-devicons'
 " step 2: font configuration
 " " These are the basic settings to get the font to work (required):
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 " set guifont=Fira\ Code\ Medium\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Medium\ 12
 
-set encoding=utf-8
+set encoding=UTF-8
 " " required if using https://github.com/bling/vim-airline
 let g:airline_powerline_fonts=1
 
