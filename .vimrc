@@ -19,10 +19,10 @@ let g:python_host_prog = '/home/fergalm/.virtualenvs/nvim2/bin/python'
 let g:python3_host_prog = '/home/fergalm/.virtualenvs/nvim3/bin/python'
 
 "LEARN THE FUCKING VIM FERG
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+"noremap <Up> <NOP>
+"noremap <Down> <NOP>
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
 
 "De-insaneify copy & paste
 set pastetoggle=<F2>
