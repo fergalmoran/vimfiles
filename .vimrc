@@ -228,7 +228,7 @@ filetype plugin on
 " Don't autoselect first omnicomplete option, show options even if there is only
 " one (so the preview documentation is accessible). Remove 'preview' if you
 " don't want to see any documentation whatsoever.
-let g:OmniSharp_server_path='/opt/OmniSharp/OmniSharp.exe'
+" let g:OmniSharp_server_path='/opt/OmniSharp/OmniSharp.exe'
 set completeopt=longest,menuone,preview
 
 " Fetch full documentation during omnicomplete requests.
@@ -310,5 +310,8 @@ let g:SuperTabDefaultCompletionType = 'context'
 
 " NerdCommenter
 let g:NERDSpaceDelims = 1
+" Update BIND SOA
+" Inspired by http://www.debian-administration.org/article/381/Updating_bind_serial_numbers_automatically
+
 
 colorscheme dracula
