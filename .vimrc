@@ -14,6 +14,7 @@ let s:uname = system("echo -n \"$(uname)\"")
 autocmd! bufwritepost .vimrc source %
 
 autocmd FileType nerdtree setlocal nolist
+autocmd vimenter * if !argc() | NERDTree | endif
 
 let g:python_host_prog = '/home/fergalm/.virtualenvs/nvim2/bin/python'
 let g:python3_host_prog = '/home/fergalm/.virtualenvs/nvim3/bin/python'
@@ -98,6 +99,7 @@ Plugin 'zxqfl/tabnine-vim'
 
 Plugin 'tpope/vim-dispatch'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'wakatime/vim-wakatime'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'klen/python-mode'
